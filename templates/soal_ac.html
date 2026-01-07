@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jawaban Soal A–C</title>
+        <style>
+        body { font-family: Arial; margin: 40px; }
+        table { border-collapse: collapse; margin-bottom: 30px; }
+        th, td { border: 1px solid #999; padding: 6px; }
+        h2 { margin-top: 50px; }
+    </style>
+    </head>
+    <body>
+
+        <a href="/">⬅ Kembali ke Beranda</a>
+
+        <h1>Jawaban Soal A – C</h1>
+
+        <h2>A. Pengenalan DataFrame</h2>
+        <h3>1. 5 Baris Pertama</h3>
+        {{ head | safe }}
+
+        <h3>2. 5 Baris Terakhir</h3>
+        {{ tail | safe }}
+
+        <h3>3. Informasi Data</h3>
+        <p>{{ info_df | safe }}</p>
+
+        <h3>4. Statistik Deskriptif</h3>
+        {{ describe | safe }}
+
+        <h3>5. Tahun Unik</h3>
+        <p>{{ tahun_unik }}</p>
+
+        <h3>6. Kabupaten/Kota Unik</h3>
+        <p>Jumlah: {{ jumlah_kab }}</p>
+
+        <h3>7. Kolom Tertentu</h3>
+        {{ kolom_tertentu | safe }}
+
+        <h2>B. Filtering & Sorting</h2>
+        <h3>8. Data Tahun 2019</h3>
+        {{ data_2019 | safe }}
+
+        <h3>9. Jumlah > 100.000</h3>
+        {{ dm_100k | safe }}
+
+        <h3>10. Urut Terbesar ke Terkecil</h3>
+        {{ sort_dm | safe }}
+
+        <h3>11. Urut Tahun lalu Jumlah</h3>
+        {{ sort_tahun_dm | safe }}
+
+        <h3>12. Top 10 Tahun 2019</h3>
+        {{ top10_2019 | safe }}
+
+        <h3>13. Data Kabupaten Bogor</h3>
+        {{ bogor | safe }}
+
+        <h2>C. Agregasi & Transformasi</h2>
+        <h3>14. Total per Tahun</h3>
+        {{ total_per_tahun | safe }}
+
+        <h3>15. Rata-rata per Kabupaten</h3>
+        {{ rata_kab | safe }}
+
+        <h3>16. Tertinggi & Terendah</h3>
+        <p>Tertinggi: {{ kab_tertinggi }}</p>
+        <p>Terendah: {{ kab_terendah }}</p>
+
+        <h3>17. Kategori DM</h3>
+        {{ kategori_table | safe }}
+
+        <h3>18. Persentase per Tahun</h3>
+        {{ persen_table | safe }}
+
+        <h3>19. Tabel Ringkas</h3>
+        {{ ringkasan | safe }}
+
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD Data Diabetes Melitus</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f6f8;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+    </style>
+    </head>
+    <body>
+
+        <h1>CRUD Data Penderita Diabetes Melitus</h1>
+
+        <form method="POST">
+            <label>Nama Kabupaten/Kota</label>
+            <input type="text" name="nama_kabupaten" required>
+
+            <label>Tahun</label>
+            <input type="number" name="tahun" required>
+
+            <label>Jumlah Penderita</label>
+            <input type="number" name="jumlah_penderita" required>
+
+            <button type="submit">Tambah Data</button>
+        </form>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nama Kabupaten/Kota</th>
+                <th>Tahun</th>
+                <th>Jumlah Penderita</th>
+                <th>Aksi</th>
+            </tr>
+
+            {% for row in data %}
+            <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.nama_kabupaten }}</td>
+                <td>{{ row.tahun }}</td>
+                <td>{{ row.jumlah_penderita }}</td>
+                <td>
+                    <a href="{{ url_for('delete', id=row.id) }}">Hapus</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>
