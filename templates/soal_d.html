@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Soal D | Visualisasi Data DM</title>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #334155;
+            --muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: -40px auto 0;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: var(--card);
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .analysis p {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Visualisasi Data Diabetes Melitus</h1>
+    <p>Jawaban Soal D • Provinsi Jawa Barat</p>
+</header>
+
+<main>
+
+    <a href="/" class="back-link">⬅ Kembali ke Beranda</a>
+
+    <div class="card">
+
+        <div class="section">
+            <h2>20. Jumlah Penderita DM per Kabupaten/Kota (2019)</h2>
+            <img src="/static/images/bar_2019.png" alt="Bar DM 2019">
+        </div>
+
+        <div class="section">
+            <h2>21. Total Penderita DM Jawa Barat per Tahun</h2>
+            <img src="/static/images/line_total_tahun.png" alt="Line Total Tahun">
+        </div>
+
+        <div class="section">
+            <h2>22. Top 10 Kabupaten/Kota dengan Penderita DM Tertinggi (2019)</h2>
+            <img src="/static/images/top10_2019.png" alt="Top 10 2019">
+        </div>
+
+        <div class="section">
+            <h2>23. Proporsi Penderita DM berdasarkan Kategori (2019)</h2>
+            <img src="/static/images/pie_kategori_2019.png" alt="Pie Kategori 2019">
+        </div>
+
+        <div class="section">
+            <h2>24. Perbandingan Total Penderita DM (3 Tahun Terakhir)</h2>
+            <img src="/static/images/bar_3tahun.png" alt="Bar 3 Tahun">
+        </div>
+
+        <div class="section analysis">
+            <h2>25. Analisis</h2>
+            <p>
+                a. Kabupaten/kota dengan jumlah penderita DM tertinggi
+                umumnya berada pada wilayah dengan jumlah penduduk besar,
+                terutama terlihat jelas pada tahun 2019.
+            </p>
+            <p>
+                b. Total penderita Diabetes Melitus di Provinsi Jawa Barat
+                menunjukkan kecenderungan meningkat dari tahun ke tahun.
+            </p>
+            <p>
+                c. Sebagian besar kabupaten/kota berada pada kategori
+                Sedang hingga Tinggi, yang menandakan DM merupakan
+                permasalahan kesehatan yang perlu mendapat perhatian serius.
+            </p>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    © 2025 • Tugas Pemrograman Dasar • Visualisasi Data
+</footer>
+
+</body>
+</html>
