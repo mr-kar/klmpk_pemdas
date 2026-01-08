@@ -1,80 +1,247 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Jawaban Soal A–C</title>
+        <title>Jawaban Soal A–C | Analisis DM</title>
         <style>
-        body { font-family: Arial; margin: 40px; }
-        table { border-collapse: collapse; margin-bottom: 30px; }
-        th, td { border: 1px solid #999; padding: 6px; }
-        h2 { margin-top: 50px; }
-    </style>
+            :root {
+                --primary: #2563eb;
+                --secondary: #0f172a;
+                --bg-color: #f8fafc;
+                --text-color: #334155;
+                --card-bg: #ffffff;
+                --border-color: #e2e8f0;
+                --highlight: #eff6ff;
+                --border-radius: 14px;
+            }
+
+            body {
+                font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+
+            header {
+                background: linear-gradient(135deg, #2563eb, #1e40af);
+                color: white;
+                padding: 40px 20px 80px 20px;
+                text-align: center;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 2.2rem;
+                font-weight: 700;
+                letter-spacing: -0.025em;
+            }
+
+            .subtitle {
+                color: #e0e7ff;
+                margin-top: 10px;
+                font-size: 1rem;
+                opacity: 0.9;
+            }
+
+            .btn-back {
+                display: inline-block;
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 600;
+                margin-bottom: 20px;
+                transition: all 0.3s ease;
+                backdrop-filter: blur(5px);
+            }
+
+            .btn-back:hover {
+                background-color: rgba(255, 255, 255, 1);
+                color: var(--primary);
+            }
+
+            .container {
+                max-width: 1500px;
+                background-color: var(--card-bg);
+                margin: -50px auto 50px auto;
+                padding: 40px;
+                border-radius: var(--border-radius);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                position: relative;
+            }
+
+            h2 {
+                color: var(--secondary);
+                border-bottom: 2px solid var(--border-color);
+                padding-bottom: 10px;
+                margin-top: 50px;
+                font-size: 1.5rem;
+                border-left: 5px solid var(--primary);
+                padding-left: 15px;
+            }
+            
+            h2:first-of-type {
+                margin-top: 0;
+            }
+
+            h3 {
+                color: var(--text-color);
+                font-size: 1.1rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+            }
+            
+            h3::before {
+                content: '';
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                background-color: var(--primary);
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+                margin-bottom: 20px;
+                font-size: 0.95rem;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            th {
+                background-color: #f1f5f9;
+                color: var(--secondary);
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 0.05em;
+                padding: 12px 15px;
+                text-align: left;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            td {
+                padding: 10px 15px;
+                border-bottom: 1px solid var(--border-color);
+                color: var(--text-color);
+            }
+
+            tr:nth-child(even) {
+                background-color: #f8fafc;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            tr:hover {
+                background-color: var(--highlight);
+            }
+
+            p {
+                display: inline-block;
+                background-color: var(--highlight);
+                color: var(--primary);
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-weight: 600;
+                border: 1px solid #dbeafe;
+                margin: 0;
+                font-family: monospace;
+                font-size: 1rem;
+            }
+        </style>
     </head>
     <body>
 
-        <a href="/">⬅ Kembali ke Beranda</a>
+        <header>
+            <a href="/" class="btn-back">⬅ Kembali ke Beranda</a>
+            <h1>Analisis Data Diabetes Melitus</h1>
+            <div class="subtitle">Hasil Pengolahan Data Jawaban Soal A – C</div>
+        </header>
 
-        <h1>Jawaban Soal A – C</h1>
+        <div class="container">
 
-        <h2>A. Pengenalan DataFrame</h2>
-        <h3>1. 5 Baris Pertama</h3>
-        {{ head | safe }}
+            <h2>A. Pengenalan DataFrame</h2>
+            
+            <h3>1. 5 Baris Pertama</h3>
+            {{ head | safe }}
 
-        <h3>2. 5 Baris Terakhir</h3>
-        {{ tail | safe }}
+            <h3>2. 5 Baris Terakhir</h3>
+            {{ tail | safe }}
 
-        <h3>3. Informasi Data</h3>
-        <p>{{ info_df | safe }}</p>
+            <h3>3. Informasi Data</h3>
+            <div style="background: #f1f5f9; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; overflow-x: auto;">
+                <pre style="margin: 0; font-family: monospace; color: #334155;">{{ info_df | safe }}</pre>
+            </div>
 
-        <h3>4. Statistik Deskriptif</h3>
-        {{ describe | safe }}
+            <h3>4. Statistik Deskriptif</h3>
+            {{ describe | safe }}
 
-        <h3>5. Tahun Unik</h3>
-        <p>{{ tahun_unik }}</p>
+            <h3>5. Tahun Unik</h3>
+            <p>{{ tahun_unik }}</p>
 
-        <h3>6. Kabupaten/Kota Unik</h3>
-        <p>Jumlah: {{ jumlah_kab }}</p>
+            <h3>6. Kabupaten/Kota Unik</h3>
+            <p>Jumlah: {{ jumlah_kab }}</p>
 
-        <h3>7. Kolom Tertentu</h3>
-        {{ kolom_tertentu | safe }}
+            <h3>7. Kolom Tertentu</h3>
+            {{ kolom_tertentu | safe }}
 
-        <h2>B. Filtering & Sorting</h2>
-        <h3>8. Data Tahun 2019</h3>
-        {{ data_2019 | safe }}
+            <h2>B. Filtering & Sorting</h2>
+            
+            <h3>8. Data Tahun 2019</h3>
+            {{ data_2019 | safe }}
 
-        <h3>9. Jumlah > 100.000</h3>
-        {{ dm_100k | safe }}
+            <h3>9. Jumlah > 100.000</h3>
+            {{ dm_100k | safe }}
 
-        <h3>10. Urut Terbesar ke Terkecil</h3>
-        {{ sort_dm | safe }}
+            <h3>10. Urut Terbesar ke Terkecil</h3>
+            {{ sort_dm | safe }}
 
-        <h3>11. Urut Tahun lalu Jumlah</h3>
-        {{ sort_tahun_dm | safe }}
+            <h3>11. Urut Tahun lalu Jumlah</h3>
+            {{ sort_tahun_dm | safe }}
 
-        <h3>12. Top 10 Tahun 2019</h3>
-        {{ top10_2019 | safe }}
+            <h3>12. Top 10 Tahun 2019</h3>
+            {{ top10_2019 | safe }}
 
-        <h3>13. Data Kabupaten Bogor</h3>
-        {{ bogor | safe }}
+            <h3>13. Data Kabupaten Bogor</h3>
+            {{ bogor | safe }}
 
-        <h2>C. Agregasi & Transformasi</h2>
-        <h3>14. Total per Tahun</h3>
-        {{ total_per_tahun | safe }}
+            <h2>C. Agregasi & Transformasi</h2>
+            
+            <h3>14. Total per Tahun</h3>
+            {{ total_per_tahun | safe }}
 
-        <h3>15. Rata-rata per Kabupaten</h3>
-        {{ rata_kab | safe }}
+            <h3>15. Rata-rata per Kabupaten</h3>
+            {{ rata_kab | safe }}
 
-        <h3>16. Tertinggi & Terendah</h3>
-        <p>Tertinggi: {{ kab_tertinggi }}</p>
-        <p>Terendah: {{ kab_terendah }}</p>
+            <h3>16. Tertinggi & Terendah</h3>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <p>📈 Tertinggi: {{ kab_tertinggi }}</p>
+                <p>📉 Terendah: {{ kab_terendah }}</p>
+            </div>
 
-        <h3>17. Kategori DM</h3>
-        {{ kategori_table | safe }}
+            <h3>17. Kategori DM</h3>
+            {{ kategori_table | safe }}
 
-        <h3>18. Persentase per Tahun</h3>
-        {{ persen_table | safe }}
+            <h3>18. Persentase per Tahun</h3>
+            {{ persen_table | safe }}
 
-        <h3>19. Tabel Ringkas</h3>
-        {{ ringkasan | safe }}
+            <h3>19. Tabel Ringkas</h3>
+            {{ ringkasan | safe }}
 
+        </div>
     </body>
 </html>
+<!-- richie -->
